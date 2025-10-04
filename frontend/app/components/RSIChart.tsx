@@ -66,8 +66,7 @@ export default function RSIChart({ data, tokenAddress }: RSIChartProps) {
             strokeDasharray="2 2" 
             strokeWidth={2}
             label={{ 
-              value: "OVERBOUGHT", 
-              position: "topLeft",
+              value: "Overbought (70)", 
               style: { fill: '#FF4C4C', fontSize: '12px', fontWeight: 'bold' }
             }}
           />
@@ -79,8 +78,7 @@ export default function RSIChart({ data, tokenAddress }: RSIChartProps) {
             strokeDasharray="2 2" 
             strokeWidth={2}
             label={{ 
-              value: "OVERSOLD", 
-              position: "bottomLeft",
+              value: "Oversold (30)", 
               style: { fill: '#00FF7F', fontSize: '12px', fontWeight: 'bold' }
             }}
           />

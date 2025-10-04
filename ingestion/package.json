@@ -1,0 +1,12 @@
+{
+  "name": "trading-data-ingestion",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "kafkajs": "^2.2.4"
+  },
+  "scripts": {
+    "ingest": "node csv-producer.js"
+  }
+}

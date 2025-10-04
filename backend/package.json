@@ -1,0 +1,9 @@
+{
+  "name": "trading-analytics-backend",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "dependencies": {
+    "ws": "^8.14.0",
+    "kafkajs": "^2.2.4"
+  }
+}

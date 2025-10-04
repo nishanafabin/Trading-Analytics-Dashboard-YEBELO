@@ -2,6 +2,10 @@
   "name": "trading-analytics-backend",
   "version": "1.0.0",
   "type": "commonjs",
+  "scripts": {
+    "start": "node websocket-server.js",
+    "dev": "node websocket-server.js"
+  },
   "dependencies": {
     "ws": "^8.14.0",
     "kafkajs": "^2.2.4"

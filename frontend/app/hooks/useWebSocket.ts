@@ -9,7 +9,8 @@ interface UseWebSocketReturn {
   isConnected: boolean;
 }
 
-export function useWebSocket(url: string): UseWebSocketReturn {
+export function useWebSocket(url?: string): UseWebSocketReturn {
+  const wsUrl = url || process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8080';
   const [tradeData, setTradeData] = useState<TradeData | null>(null);
   const [rsiData, setRsiData] = useState<RSIData | null>(null);
   const [isConnected, setIsConnected] = useState(false);
@@ -18,7 +19,7 @@ export function useWebSocket(url: string): UseWebSocketReturn {
   useEffect(() => {
     const connectWebSocket = () => {
       try {
-        wsRef.current = new WebSocket(url);
+        wsRef.current = new WebSocket(wsUrl);
 
         wsRef.current.onopen = () => {
           setIsConnected(true);
